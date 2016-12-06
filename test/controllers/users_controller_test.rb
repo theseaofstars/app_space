@@ -9,7 +9,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
-    get edit_user_path
+    get edit_user_path(users(:mecheal))
     assert_response :success
   end
 

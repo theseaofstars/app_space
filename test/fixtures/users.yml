@@ -3,9 +3,9 @@
 mecheal:
   name: mecheal
   email: mecheal@live.cn
-  password: <%= User.digest("password") %>
+  password_digest: <%= User.digest("password") %>
 
 anla:
   name: anla
   email: anla@live.cn
-  password: <%= User.digest("password") %>
+  password_digest: <%= User.digest("password") %>
