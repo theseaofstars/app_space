@@ -37,17 +37,5 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     end
   end
 #/
-/#  test "should create a user" do
-    assert_difference "User.count",1 do
-      post users_path,params: {
-          user: {
-              name: "test",
-              email: "test@live.cn",
-              password: "foobar",
-              password_confirmation: "foobar"
-          }
-      }
-    end
-  end
-#/
+
 end
