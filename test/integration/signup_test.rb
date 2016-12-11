@@ -18,6 +18,7 @@ class SignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template "users/show"
+    assert is_logged_in?
   end
 
   test "invalid information should not create a user" do

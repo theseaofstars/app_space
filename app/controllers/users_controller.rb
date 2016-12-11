@@ -14,8 +14,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.valid?
-      @user.save
+    if @user.save
+      log_in(@user)
+      flash[:sucess] = "欢迎来到APP Space"
       redirect_to user_path(@user)
     else
       render 'users/new'
@@ -31,6 +32,8 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
+
   private
     def user_params
       params.require(:user).permit(:name,:email,:password,:password_confirmation)
