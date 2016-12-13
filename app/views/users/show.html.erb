@@ -1,6 +1,12 @@
 <div class="row">
   <aside class="col-md-2" id="user-sidebar">
-    <%= @user.name%>
+    <div class="row">
+      <%= @user.name %>
+    </div>
+    <div class="row">
+      <%=link_to "个人空间","#"%>
+    </div>
+
   </aside>
   <div class="col-md-10" id="app-space">
     应用内容
